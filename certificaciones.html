@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomás Vlaeminck - Certificaciones</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            background-color: var(--card-bg);
+            border: none;
+            cursor: pointer;
+            margin: 0 5px;
+            color: var(--text-color);
+            border-radius: 5px;
+        }
+        .tab.active {
+            background-color: var(--blue-400);
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .certificacion {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .certificacion img {
+            width: 100%;
+            height: 300px; /* Aumentado de 200px a 300px */
+            object-fit: contain; /* Cambiado de 'cover' a 'contain' para mostrar la imagen completa */
+        }
+        .certificacion-content {
+            padding: 20px;
+        }
+        .certificacion h3 {
+            margin-top: 0;
+            color: var(--text-color);
+        }
+        .badge {
+            display: inline-block;
+            background-color: var(--card-border);
+            padding: 5px 10px;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            color: var(--text-color);
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--blue-400);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .navigation-arrows {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .arrow {
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--blue-400);
+        }
+        .certificaciones-container {
+            position: relative;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .popup-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 700px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+        .popup-content img {
+            width: 100%;
+            height: auto;
+        }
+        .close {
+            color: #ff0000; /* Cambiado a rojo */
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #8b0000; /* Rojo oscuro al pasar el mouse */
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="content">
+        
+        <main class="container">
+            <section class="card">
+                <h2>Mis Certificaciones</h2>
+                <div class="tabs">
+                    <button class="tab active" data-category="Programación">Programación</button>
+                    <button class="tab" data-category="Data">Data</button>
+                    
+                </div>
+                
+                <div class="tab-content active" data-category="Programación">
+                    <div class="certificaciones-container">
+                        <div class="certificacion">
+                            <img src="img/Certificados/Programacion/Alura -Tomás Vlaeminck - Formación Lógica de programación con JavaScript - Alura.jpg" alt="Certificación de Programación 1">
+                            <div class="certificacion-content">
+                                <div style="display: flex; align-items: center;">
+                                    <h3>Formación Lógica de programación con JavaScript</h3>
+                                </div>
+                                <a href="https://app.aluracursos.com/user/tomasvlaeminck-info/fullCertificate/ad09d3b61b99ff2b502ec77346a404a9" target="_blank" style="color: var(--text-color); text-decoration: none;">
+                                <p style="margin-top: 0;">Alura - Oracle Next Education</p>
+                                </a>
+                                <span class="badge">Fecha de obtención: 17/03/24</span>
+                                <br>
+                                <a href="#" class="btn view-certificate" data-img="img/Certificados/Programacion/Alura -Tomás Vlaeminck - Formación Lógica de programación con JavaScript - Alura.jpg">Ver certificado</a>
+                            </div>
+                        </div>
+
+                        <div class="certificacion">
+                            <img src="img/Certificados/Programacion/Coursera  - Introducción a la programación.jpg" alt="Introducción a la programación">
+                            <div class="certificacion-content">
+                                <h3>Introducción a la programación</h3>
+                                <p>Coursera</p>
+                                <span class="badge">Fecha de obtención: 15/11/2023</span>
+                                <br>
+                                <a href="#" class="btn view-certificate" data-img="img/Certificados/Programacion/Coursera  - Introducción a la programación.jpg" >Ver certificado</a>
+                                <a href="https://scratch.mit.edu/projects/924699225" target="_blank" class="btn">Ver proyecto</a>
+                            </div>
+                        </div>
+
+                        <div class="certificacion">
+                            <img src="img/Certificados/Programacion/Alura -Tomás Vlaeminck - Curso Lógica de programación.jpg" alt="Certificación de Desarrollo">
+                            <div class="certificacion-content">
+                                <h3>Curso Lógica de programación</h3>
+                                <a href="https://app.aluracursos.com/user/tomasvlaeminck-info/fullCertificate/ad09d3b61b99ff2b502ec77346a404a9" target="_blank" style="color: var(--text-color); text-decoration: none;">
+                                    <p>Alura - Oracle Next Education</p>
+                                </a>
+                                <span class="badge">Fecha de obtención:17/03/24</span>
+                                <br>
+                                <a href="#" class="btn view-certificate" data-img="img/Certificados/Programacion/Alura -Tomás Vlaeminck - Curso Lógica de programación.jpg">Ver certificado</a>
+                            </div>
+                        </div>
+
+
+                        <div class="certificacion">
+                            <img src="img/Certificados/Programacion/Alura -Tomás Vlaeminck - Formación Programacion - Alura.jpg" alt="Certificación de Desarrollo">
+                            <div class="certificacion-content">
+                                <h3>Formación Programacion</h3>
+                                <a href="https://app.aluracursos.com/user/tomasvlaeminck-info/fullCertificate/ad09d3b61b99ff2b502ec77346a404a9" target="_blank" style="color: var(--text-color); text-decoration: none;">
+                                    <p>Alura - Oracle Next Education</p>
+                                </a>
+                                <span class="badge">Fecha de obtención:17/03/24</span>
+                                <br>
+                                <a href="#" class="btn view-certificate" data-img="img/Certificados/Programacion/Alura -Tomás Vlaeminck - Formación Programacion - Alura.jpg">Ver certificado</a>
+                                <a href="https://encriptador-alura-tomasvlaeminck.netlify.app/" target="_blank" class="btn">Ver proyecto</a>
+                            </div>
+                        </div>
+
+                        <!-- ... (navegación de flechas sin cambios) ... -->
+                        <div class="navigation-arrows">
+                            <span class="arrow left-arrow"><i class="fas fa-chevron-left"></i></span>
+                            <span class="arrow right-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <!-- ... DATA ... -->
+
+                <div class="tab-content" data-category="Data">
+
+                     <!-- ... CERTIFICADO ... -->
+                    <div class="certificaciones-container">
+                        <div class="certificacion">
+                            <img src="img/Certificados/Data/Coursera  - Ciencia de datos.jpg" alt="Certificación de Data Science">
+                            <div class="certificacion-content">
+                                <h3>¿Qué es la ciencia de datos? por IBM</h3>
+                                <p>Coursera</p>
+                                <span class="badge">Fecha de obtención: 20/06/2023</span>
+                                <br>
+                                <a href="#" class="btn view-certificate" data-img="img/Certificados/Data/Coursera  - Ciencia de datos.jpg">Ver certificado</a>
+                            <!--<a href="https://www.ejemplo.com/proyecto-data-science" target="_blank" class="btn">Ver proyecto</a>-->
+                            </div>
+                        </div>
+
+                        <!-- ... CERTIFICADO ... -->
+                        <div class="certificaciones-container">
+                            <div class="certificacion">
+                                <img src="img/Certificados/Data/Coursera - Ia para todos.jpg" alt="Certificación de Data Science">
+                                <div class="certificacion-content">
+                                    <h3>Ia para todos por Deeplearning.AI</h3>
+                                    <p>Coursera</p>
+                                    <span class="badge">Fecha de obtención: 25/10/2023</span>
+                                    <br>
+                                    <a href="#" class="btn view-certificate" data-img="img/Certificados/Data/Coursera - Ia para todos.jpg">Ver certificado</a>
+                                <!--<a href="https://www.ejemplo.com/proyecto-data-science" target="_blank" class="btn">Ver proyecto</a>-->
+                                </div>
+                            </div>
+                            <!-- ... CERTIFICADO ... -->
+
+                             <!-- ... CERTIFICADO ... -->
+                        <div class="certificaciones-container">
+                            <div class="certificacion">
+                                <img src="img/Certificados/Data/Curso - Introducción a excel - Platzi.jpg" alt="Certificación de Data Science">
+                                <div class="certificacion-content">
+                                    <h3>Introducción a Excel</h3>
+                                    <p>Platzi</p>
+                                    <span class="badge">Fecha de obtención: 04/04/2023</span>
+                                    <br>
+                                    <a href="#" class="btn view-certificate" data-img="img/Certificados/Data/Curso - Introducción a excel - Platzi.jpg">Ver certificado</a>
+                                <!--<a href="https://www.ejemplo.com/proyecto-data-science" target="_blank" class="btn">Ver proyecto</a>-->
+                                </div>
+                            </div>
+                            <!-- ... CERTIFICADO ... -->
+
+                            <!-- ... CERTIFICADO ... -->
+                        <div class="certificaciones-container">
+                            <div class="certificacion">
+                                <img src="img/Certificados/Data/Alura -Tomás Vlaeminck - Curso Git y GitHub repositorio, commit y versiones - Alura.jpg" alt="Certificación de Data Science">
+                                <div class="certificacion-content">
+                                    <h3>Curso Git y GitHub</h3>
+                                    <p>Alura</p>
+                                    <span class="badge">Fecha de obtención: 06/07/2024</span>
+                                    <br>
+                                    <a href="#" class="btn view-certificate" data-img="img/Certificados/Data/Alura -Tomás Vlaeminck - Curso Git y GitHub repositorio, commit y versiones - Alura.jpg">Ver certificado</a>
+                                <!--<a href="https://www.ejemplo.com/proyecto-data-science" target="_blank" class="btn">Ver proyecto</a>-->
+                                </div>
+                            </div>
+                            <!-- ... CERTIFICADO ... -->
+
+                              
+
+                             <!-- ... CERTIFICADO ... -->
+                        <div class="certificaciones-container">
+                            <div class="certificacion">
+                                <img src="img/Certificados/Data/Platzi - diploma-visualizacion-datos.jpg" alt="Certificación de Data Science">
+                                <div class="certificacion-content">
+                                    <h3>Principios de visualización de datos para business intelligence</h3>
+                                    <p>Platzi</p>
+                                    <span class="badge">Fecha de obtención: 09/01/2024</span>
+                                    <br>
+                                    <a href="#" class="btn view-certificate" data-img="img/Certificados/Data/Platzi - diploma-visualizacion-datos.jpg">Ver certificado</a>
+                                <!--<a href="https://www.ejemplo.com/proyecto-data-science" target="_blank" class="btn">Ver proyecto</a>-->
+                                </div>
+                            </div>
+                            <!-- ... CERTIFICADO ... -->
+
+                             <!-- ... CERTIFICADO ... -->
+                        <div class="certificaciones-container">
+                            <div class="certificacion">
+                                <img src="img/Certificados/Data/Tablas dinamicas - Camara de comercio.jpg" alt="Certificación de Data Science">
+                                <div class="certificacion-content">
+                                    <h3>Curso de tablas dinamicas</h3>
+                                    <p>Camcop</p>
+                                    <span class="badge">Fecha de obtención: 15/04/2023</span>
+                                    <br>
+                                    <a href="#" class="btn view-certificate" data-img="img/Certificados/Data/Tablas dinamicas - Camara de comercio.jpg">Ver certificado</a>
+                                <!--<a href="https://www.ejemplo.com/proyecto-data-science" target="_blank" class="btn">Ver proyecto</a>-->
+                                </div>
+                            </div>
+                            <!-- ... CERTIFICADO ... -->
+
+
+
+                        <!-- Agrega más certificaciones de Data aquí si las tienes -->
+
+                        <div class="navigation-arrows">
+                            <span class="arrow left-arrow"><i class="fas fa-chevron-left"></i></span>
+                            <span class="arrow right-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ... Diseño Web ... -->
+                <div class="tab-content" data-category="Diseño Web">
+                    <div class="certificaciones-container">
+                        <div class="certificacion">
+                            <img src="img/Certificados/Diseño web/Alura -Tomás Vlaeminck - Curso HTML5 y CSS3 parte 1 Mi primera página web - Alura.jpg" alt="Certificación de HTML y CSS">
+                            <div class="certificacion-content">
+                                <h3>Curso HTML5 y CSS3 parte 1 Mi primera página web</h3>
+                                <p>Alura</p>
+                                <span class="badge">Fecha de obtención: 15/03/2024</span>
+                                <br>
+                                <a href="#" class="btn view-certificate" data-img="img/Certificados/Diseño web/Alura -Tomás Vlaeminck - Curso HTML5 y CSS3 parte 1 Mi primera página web - Alura.jpg">Ver certificado</a>
+                            </div>
+                        </div>
+                        <div class="navigation-arrows">
+                            <span class="arrow left-arrow"><i class="fas fa-chevron-left"></i></span>
+                            <span class="arrow right-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                <div class="tab-content" data-category="Soft Skills">
+                    <div class="certificaciones-container">
+                        <div class="certificacion">
+                            <img src="img/Certificados/Soft Skills/Alura -Tomás Vlaeminck - Formación Soft Skills - Alura.jpg" alt="Certificación de Soft Skills">
+                            <div class="certificacion-content">
+                                <h3>Formación Soft Skills</h3>
+                                <p>Alura</p>
+                                <span class="badge">Fecha de obtención</span>
+                                <br>
+                                <a href="#" class="btn view-certificate" data-img="img/Certificados/Soft Skills/Alura -Tomás Vlaeminck - Formación Soft Skills - Alura.jpg">Ver certificado</a>
+                            </div>
+                        </div>
+                        <!-- Agregar más certificaciones de Soft Skills aquí si las hay -->
+                    </div>
+                </div>
+                
+                <div class="tab-content" data-category="Otros">
+                    <div class="certificaciones-container">
+                        <div class="certificacion">
+                            <img src="img/Certificados/Otros/Alura -Tomás Vlaeminck - Formación Emprendimiento - Alura.jpg" alt="Certificación de Emprendimiento">
+                            <div class="certificacion-content">
+                                <h3>Formación Emprendimiento</h3>
+                                <p>Alura</p>
+                                <span class="badge">Fecha de obtención</span>
+                                <br>
+                                <a href="#" class="btn view-certificate" data-img="img/Certificados/Otros/Alura -Tomás Vlaeminck - Formación Emprendimiento - Alura.jpg">Ver certificado</a>
+                            </div>
+
+                        </div>
+                        <!-- Agregar más certificaciones de Otros aquí si las hay -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="container">
+            <p>© 2023 Tomás Vlaeminck. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <!-- Popup para mostrar el certificado -->
+    <div id="certificatePopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img id="certificateImage" src="" alt="Certificado">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Simple tab functionality
+        const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const category = tab.getAttribute('data-category');
+                
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                tab.classList.add('active');
+                document.querySelector(`.tab-content[data-category="${category}"]`).classList.add('active');
+            });
+        });
+
+        // Navegación de certificaciones
+        const leftArrow = document.querySelector('.left-arrow');
+        const rightArrow = document.querySelector('.right-arrow');
+        let currentIndex = 0;
+
+        function showCertificacion(index, category) {
+            const certificaciones = document.querySelectorAll(`.tab-content[data-category="${category}"] .certificacion`);
+            certificaciones.forEach((cert, i) => {
+                if (i === index) {
+                    cert.style.display = 'block';
+                } else {
+                    cert.style.display = 'none';
+                }
+            });
+        }
+
+        function updateNavigation(category) {
+            const certificaciones = document.querySelectorAll(`.tab-content[data-category="${category}"] .certificacion`);
+            currentIndex = 0;
+            showCertificacion(currentIndex, category);
+
+            const leftArrow = document.querySelector(`.tab-content[data-category="${category}"] .left-arrow`);
+            const rightArrow = document.querySelector(`.tab-content[data-category="${category}"] .right-arrow`);
+
+            leftArrow.onclick = () => {
+                currentIndex = (currentIndex - 1 + certificaciones.length) % certificaciones.length;
+                showCertificacion(currentIndex, category);
+            };
+
+            rightArrow.onclick = () => {
+                currentIndex = (currentIndex + 1) % certificaciones.length;
+                showCertificacion(currentIndex, category);
+            };
+        }
+
+        // Actualizar la navegación cuando se cambia de pestaña
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const category = tab.getAttribute('data-category');
+                updateNavigation(category);
+            });
+        });
+
+        // Inicializar la navegación para la primera pestaña
+        updateNavigation('Programación');
+
+        // Funcionalidad para el popup de certificados
+        const popup = document.getElementById('certificatePopup');
+        const popupImg = document.getElementById('certificateImage');
+        const closeBtn = document.getElementsByClassName('close')[0];
+
+        // Asegurarse de que el popup esté oculto al cargar la página
+        popup.style.display = 'none';
+
+        document.addEventListener('click', function(e) {
+            if (e.target && e.target.classList.contains('view-certificate')) {
+                e.preventDefault();
+                const imgSrc = e.target.getAttribute('data-img');
+                popupImg.src = imgSrc;
+                popup.style.display = 'flex';
+            }
+        });
+
+        closeBtn.onclick = function() {
+            popup.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == popup) {
+                popup.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Pokemon ⚡</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .loading-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+        }
+        .dashboard-container {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+       <!-- <header class="container">
+            <div class="header-content">
+                <img src="img/Perfil.png" alt="Foto de perfil de Tomás Vlaeminck" class="profile-pic">
+                <div class="header-text">
+                    <h1>Tomás Vlaeminck</h1>
+                    <p>Estudiante de Ciencias de Datos y Visualización</p>
+                </div>
+            </div>
+        </header>-->
+        <main class="container">
+            <section id="project-details" class="card">
+                <!-- Los detalles del proyecto se cargarán aquí dinámicamente -->
+            </section>
+            <section id="dashboard">
+                <h2>Dashboard de Pokemon trabajado en LookerStudio</h2>
+                <div class="loading-container">
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/psyduck.gif" alt="Loading...">
+                </div>
+                <div class="dashboard-container" id = "LookerPokemon">
+                    <iframe width="1000" height="600" src="https://lookerstudio.google.com/embed/reporting/95b34bb9-8a60-455a-9375-9bb5f6cc69ce/page/HwkCE" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+                </div>
+            </section>
+        </main>
+        <footer class="container">
+            <p>© 2023 Tomás Vlaeminck. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    <script src="proyecto2.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            document.querySelector('.loading-container').style.display = 'none';
+            document.querySelector('.dashboard-container').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

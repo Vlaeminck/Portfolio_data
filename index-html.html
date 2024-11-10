@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomás Vlaeminck - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="content">
+        <header class="container">
+            <div class="header-content">
+                <img src="img/Perfil.png" alt="Foto de perfil de Tomás Vlaeminck" class="profile-pic">
+                <div class="header-text">
+                    <h1>Tomás Vlaeminck</h1>
+                    <p>Presentación de proyectos y portfolio</p>
+                </div>
+            </div>
+        </header>
+
+       <!-- <main class="container">
+            <section id="about" class="card">
+                <h2><i class="fas fa-chart-line"></i>- Sobre Mí</h2>
+                <p>
+                    Apasionado tecnológico y estudiante de primer año en Ciencia de Datos e Inteligencia Artificial en ISTEA, con un enfoque intenso en programación, bases de datos y visualización. Mi curiosidad por las últimas tendencias tecnológicas impulsa mi aprendizaje continuo y crecimiento profesional. Busco aplicar mis habilidades en proyectos innovadores que transformen datos en soluciones.
+                </p>
+            </section>
+-->
+
+            <section id="projects">
+                <h2><i style="padding: 10px 10px" class="fa-solid fa-chart-simple"></i>Proyectos Destacados</h2>
+                <div class="grid">
+                    <div class="card project-card pokedex-card" onclick="window.location.href='proyecto2.html';">
+                        <h2>Dashboard Pokedex 1era Generación ⚡</h2>
+                        <p class="subtitle">Visualización de Datos</p>
+                        <p>Desarrollé un dashboard interactivo en Looker Studio con datos de Pokedex de la 1era generación</p>
+                        <p class="result">Resultado: Lograr visualizar los datos de la Pokedex de manera interactiva</p>
+                    </div>
+                    <div class="card project-card" data-project-id="2" onclick="window.location.href='python1.html';">
+                        <h2>Proyecto de Python - Pedro Blacklist 👮‍♂️</h2>
+                        <p class="subtitle">Codigo de prueba en playground Replit</p>
+                        <p>"Pedro no puede pasar" es un ejercicio de validación de datos donde hacemos que al ingresar cierto parámetro el código nos devuelva una u otra respuesta</p>
+                        <p class="result">Resultado: Poner en práctica conceptos de tipos y funciones</p>
+                    </div>
+                </div>
+            
+            </section>
+            <!--<section id="projects">
+                <div class="grid">
+                    <div class="card project-card pokedex-card" onclick="window.location.href='proyecto2.html';">
+                        <h3>Dashboard Pokedex 1era Generación</h3>
+                        <p class="subtitle">Visualización de Datos</p>
+                        <p>Desarrollé un dashboard interactivo en Looker Studio con datos de Pokedex de la 1era generación</p>
+                        <p class="result">Resultado: Lograr visualizar los datos de la Pokedex de manera interactiva</p>
+                    </div>
+                    <div class="card project-card" data-project-id="2">
+                        <h3>Vacio</h3>
+                        <p class="subtitle">Machine Learning</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad enim maiores ipsa. Blanditiis, praesentium repudiandae? Cum minima, iste error placeat quam, cupiditate at modi fugit voluptates rerum, beatae saepe praesentium.</p>
+                        <p class="result">Resultado: Reducción del 15% en costos de inventario</p>
+                    </div>
+                </div>
+            </section>-->
+        <!--
+            <section id="skills">
+                <h2><i class="icon trending-up"></i> Habilidades</h2>
+                <div class="card">
+                    <canvas id="skillsChart"></canvas>
+                </div>
+            </section>!>
+           --> 
+            <section id="education">
+                <h2><i class="icon book-open"></i><i style="padding-right: 10px;" class="fa-solid fa-user-graduate"></i> Educación </h2>
+                <div class="card">
+                    <h2>Tecnicatura Superior en Ciencia de Datos</h2>
+                    <p class="subtitle">ISTEA, Marzo 2024 - Actualmente</p>
+                    <p>Materias aprobadas: Base de Datos Relacionales, Metodologías Ágiles, 
+                    Programación en Python, Recopilación e Integración de Datos, Matemática</p>
+                    <p class="result">25% de la carrera completada - Promedio: 7.6</p>
+                </div>
+                
+            </section>
+
+            <section id="education">
+                <h2><i class="icon book-open"></i> Certificaciones <i style="padding-left: 10px;" class="fa-solid fa-award"></i> </h2>
+                <div class="card" onclick="window.location.href='certificaciones.html';" style="cursor: pointer;">
+                    <h2>Certificaciones realizadas</h2>
+                    <p>En Coursera, Platzi, Alura, entre otros</p>
+                    <p>En áreas de programación, diseño web, lógica de programación y herramientas de la industria</p>
+                    <p class="result">Certificaciones realizadas entre 2023 y 2024</p>
+                   
+                </div>
+            </section>
+
+            <!--
+            <section id="fun-facts">
+                <h2><i class="icon bar-chart"></i> Datos Curiosos</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3 id="dataProcessed">0 GB</h3>
+                        <p>Datos Procesados</p>
+                    </div>
+                    <div class="card">
+                        <h3 id="visualizationsCreated">0</h3>
+                        <p>Visualizaciones Creadas</p>
+                    </div>
+                    <div class="card">
+                        <h3 id="queriesWritten">0</h3>
+                        <p>Consultas SQL Escritas</p>
+                    </div>
+                    <a href="https://www.chess.com/stats/overview/varnockmattick" target="_blank" rel="noopener noreferrer" class="card" style="text-decoration: none; color: inherit;">
+                        <h3 id="chessGames">37</h3>
+                        <p>Partidas de ajedrez en los últimos 90 días ♟️</p>
+                    </a>
+                </div>-->
+            </section>
+
+        <!--<section id="contact">
+                <h2><i class="icon message-square"></i> Contáctame</h2>
+                <div class="card">
+                    <form id="contactForm">
+                        <div class="form-grid">
+                            <div>
+                                <label for="name">Nombre</label>
+                                <input type="text" id="name" placeholder="Tu nombre" required>
+                            </div>
+                            <div>
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="tu@email.com" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" placeholder="Tu mensaje" required></textarea>
+                        </div>
+                        <button type="submit">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </section>-->
+
+            <section id="social">
+                <h2></h2>
+                <div class="social-buttons">
+                    <a href="https://www.linkedin.com/in/tom%C3%A1s-vlaeminck-b53340214/" target="_blank" class="icon-button">
+                        <i class="fab fa-linkedin"></i>
+                        <span class="sr-only">LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/Vlaeminck" target="_blank" class="icon-button">
+                        <i class="fab fa-github"></i>
+                        <span class="sr-only">GitHub</span>
+                    </a>
+                    <a href="https://x.com/TOMNAKAMOT" target="_blank" class="icon-button">
+                        <i class="fab fa-twitter"></i>
+                        <span class="sr-only">Instagram</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="container">
+            <p>Hecho con  <i class="fa fa-heart"></i> por Tomás Vleaminck</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
